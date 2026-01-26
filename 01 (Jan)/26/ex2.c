@@ -14,4 +14,5 @@ int main(void){
     printf("%d / %d = %d\n", first, second, first/second);
     printf("%d %% %d = %d\n", first, second, first%second);
 
+    return 0;
 }
