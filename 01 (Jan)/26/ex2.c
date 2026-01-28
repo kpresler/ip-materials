@@ -12,6 +12,8 @@ int main(void){
     printf("%d - %d = %d\n", first, second, first-second);
     printf("%d * %d = %d\n", first, second, first*second);
     printf("%d / %d = %d\n", first, second, first/second);
+    printf("%d / %d = %f\n", first, second, first/(float)second);
     printf("%d %% %d = %d\n", first, second, first%second);
 
+    return 0;
 }
