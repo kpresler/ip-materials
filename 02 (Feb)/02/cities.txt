@@ -1,0 +1,5 @@
+Baltimore 600000
+NYC 8000000
+Raleigh 550000
+DC 650000
+
