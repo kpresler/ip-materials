@@ -5,9 +5,13 @@
 
 int main (int argc, char * argv[]) {
 
-    assert (argc == 2);
-
     printf("Program run as: %s %s\n", argv[0], argv[1]);
+
+    if (argc != 2){
+
+        printf("Program must be run as %s <upper_limit>\n", argv[0]);
+        return -1;
+    }
 
     int maxPow = atoi(argv[1]);
 
