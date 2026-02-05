@@ -29,7 +29,7 @@ long fib(int n) {
 
 int main (void) {
 
-    printf("5! = %d\n", factorial(5));
+    printf("5! = %ld\n", factorial(5));
 
 
     printf("20! = %ld\n", factorial(20));
