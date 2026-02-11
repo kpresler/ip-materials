@@ -21,4 +21,6 @@ int main (void) {
 }
 
 
-void increment (int a) { a += 1; }
+void increment (int a) {
+    a += 1;
+}

@@ -9,8 +9,8 @@ int main (void) {
     int b = 20;
 
     // we read the variable declaration `int * pa` as "pa is a pointer-to-int"
-	// and here I was, thinking that PA was Pennsylvania...
-	
+    // and here I was, thinking that PA was Pennsylvania...
+
 	// we set pa to store the _address_ (or location) the variable `a`.  alternatively, you think
     // of this as "pa _points to_ a".
     // `&` is the "address-of" operator.
