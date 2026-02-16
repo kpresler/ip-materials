@@ -69,6 +69,27 @@ int main (void) {
     myArr[2][4] = 24;
 
 
+    printf("Address of the outer array: myArr: %p\n", myArr);
+
+    printf("\n");
+
+    printf("Address of the pointer to the first row in the array: &myArr[0]: %p\n", &myArr[0]);
+    printf("Address of the pointer to the second row in the array: &myArr[1]: %p\n", &myArr[1]);
+    printf("Address of the pointer to the third row in the array: &myArr[2]: %p\n", &myArr[2]);
+
+    printf("\n");
+
+    printf("Address of the start of the first row of the array: myArr[0]: %p\n", myArr[0]);
+    printf("Address of the start of the second row of the array: myArr[1]: %p\n", myArr[1]);
+    printf("Address of the start of the third row of the array: myArr[2]: %p\n", myArr[2]);
+
+    printf("\n");
+
+    printf("Address of element [0][0]: &myArr[0][0]: %p\n", &myArr[0][0]);
+    printf("Address of element [0][1]: &myArr[0][1]: %p\n", &myArr[0][1]);
+
+
+
     // when we're done, we've got to clean up in two steps, the reverse of the above
 
     for (int i = 0; i < rows; i++) {
