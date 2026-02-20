@@ -25,9 +25,9 @@ int main (void) {
     // but, it's still alive, and we can still see it with GDB if we go poking around
     // we could also probably do something horrible to figure outs its address on the
     // stack in func1, but that's a hack and I won't show you how
-	
-	func1();
-	
+
+    func1();
+
 
 
     // demonstration of static variables
