@@ -8,6 +8,10 @@ void printBits(int num) {
     printf("\n");
 }
 
+int sq(int num) {
+    return num * num;
+}
+
 int main (void) {
 
     int a = 2048;
@@ -43,6 +47,12 @@ int main (void) {
     c = 37;
     a = c;
     printf("a=%d, c=%d\n", a, c);
+
+
+    double d = 13.7;
+    double squared = sq(d);
+
+    printf("%f squared is %f\n", d, squared);
 
 
     // casting can also be used if we want to do integer/floating point arithmetic when it would default to something else
