@@ -49,8 +49,8 @@ int main (void) {
     int * brokenPtr = veryConstPtr;
     *brokenPtr = 111;
     brokenPtr = &b;
-	
-	
-	return 0;
+
+
+    return 0;
 
 }
