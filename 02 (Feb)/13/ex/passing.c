@@ -13,7 +13,7 @@ int main() {
   while (getdate(&mon, &day, &yr) == 3) {
     printf("%s %d, %d\n", months[mon-1], day, yr);
   }
-  
+
   return 0;
 }
 

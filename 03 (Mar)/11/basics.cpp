@@ -34,10 +34,10 @@ int main (void) {
     using std::cout;
     using std::endl;
     using std::cin;
-	
-	// note, do not just do `using namespace std` -- yes, it's tidier
-	// but it imports _all_ of the namespace, which defeats why we split
-	// things up into namespaces in the first place.
+
+    // note, do not just do `using namespace std` -- yes, it's tidier
+    // but it imports _all_ of the namespace, which defeats why we split
+    // things up into namespaces in the first place.
 
     cout << "Enter as many numbers as you want, one at a time " << endl;
 

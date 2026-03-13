@@ -9,17 +9,12 @@ int * primes(int upperLimit, int *found);
 bool isPrime(int num);
 
 int main (void) {
-
-
     int a = 10;
     char c = 'J';
-
     char arr[] = "JHU";
-
 
     char * arrHeap = (char *) malloc(sizeof(arr)); /* no need for +1, since sizeof includes null terminator */
     strcpy(arrHeap, arr);
-
 
 
     printf("stack-allocated `a` is located at   %p\n", &a);
@@ -27,6 +22,7 @@ int main (void) {
     printf("stack-allocated `arr` is located at %p\n", arr);
     printf("heap-allocated `arrHeap` is located at %p\n", arrHeap);
 
+    printf("Our old string was %s, our new string is %s\n", arr, arrHeap);
 
     free(arrHeap); // make sure to free all heap-allocated memory when we are done with it;
 
@@ -35,7 +31,7 @@ int main (void) {
     int primesFound = 0;
 
     int * res = primes(upperLimit, &primesFound);
-	
+
     if (! res) return -1;
 
     printf("Found %d primes between 0 and %d\n", primesFound, upperLimit);
@@ -46,6 +42,8 @@ int main (void) {
 
     }
     printf("\n");
+
+    free(res);
 
     return 0;
 

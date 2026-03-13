@@ -5,9 +5,9 @@
 // this function takes a message in binary form (i.e., a message that only includes
 // 0s and 1s) as a string and returns decimal equivalent of it as an integer.
 // Example: string message "111101" return 61 as an int, since 61 is decimal
-// equivalent of "111101".  
+// equivalent of "111101".
 int str_to_int(char msg[], int len) {
-  
+
   // TODO: FINISH IMPLEMENTATION
   int value = 0;
   for (int i = 0; i < len; ++i) {
@@ -17,24 +17,10 @@ int str_to_int(char msg[], int len) {
   return value; // STUB: REPLACE THIS
 }
 
-// alternate str_to_int implementation
-int str_to_int_alt(char msg[], int len) {
-  
-  // TODO: FINISH IMPLEMENTATION
-  int value = 0;
-  for (int i = 0; i < len; ++i) {
-    // note: ascii code of '1' is 49, '0' is 48
-    value += ((int)(msg[len-1-i] - 48) << i);
-  }
-  
-  return value; // STUB: REPLACE THIS
-}
-
-
 // this function takes a decimal value as an integer and creates a string
 // including 0s and 1s that is the binary representation of the integer number.
 // Example: number 61 (as an int) results in "111101", since "111101" is
-// binary representation of the decimal value 61.  
+// binary representation of the decimal value 61.
 void int_to_str(int num_encrypted, char msg_encrypted[], int len) {
 
   // TODO: FINISH IMPLEMENTATION
@@ -52,7 +38,7 @@ int main() {
   int n = -1; // n used in encryption
 
   // test if "111101" is coverted to 61
-  printf("Debug test: %d\n", str_to_int("111101", 6)); 
+  printf("Debug test: %d\n", str_to_int("111101", 6));
   // test if 61 is converted to "111101"
   char test[33] = {'\0'};
   int_to_str(61, test, 6);
@@ -62,13 +48,13 @@ int main() {
   if (scanf(" %s", msg) != 1) { // read the binary message as a string
     printf("Could not read the message!\n");
     return 1;
-  }  
+  }
 
   int len = strlen(msg); // length of the binary message
-  
+
   // convert the string binary message to an integer
   num_msg = str_to_int(msg, len);
-  
+
   // read n
   printf ("Enter n: ");
   if (scanf("%d", &n) != 1) {
@@ -78,7 +64,7 @@ int main() {
 
   int num_encrypted = num_msg;
   // TODO: NOW PERFORM THE ENCRYPTION BY SHIFTING "msg" n - 1
-  // TIMES AND XORING THE CORRESPONDING COLUMNS 
+  // TIMES AND XORING THE CORRESPONDING COLUMNS
   for (int i = 1; i < n; ++i) {
     num_encrypted = num_encrypted ^ (num_msg << i);
   }
