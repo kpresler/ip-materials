@@ -32,14 +32,14 @@ int main (void) {
     using std::cout; using std::endl;
 
     cout << "Length of our list is " << length(&n3) << endl;
-	
-	
-	Node<char> c1 = {'A', NULL};
-	Node<char> c2 = {'B', &c1};
-	Node<char> c3 = {'C', &c2};
-	Node<char> c4 = {'D', &c3};
-	
-	
+
+
+    Node<char> c1 = {'A', NULL};
+    Node<char> c2 = {'B', &c1};
+    Node<char> c3 = {'C', &c2};
+    Node<char> c4 = {'D', &c3};
+
+
     cout << "Length of our list is " << length(&c4) << endl;
 
     return 0;
