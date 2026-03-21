@@ -58,6 +58,7 @@ int main (void) {
     // of a data structure, independently of how they are actually stored
     // this becomes more useful when we get to maps (tomorrow!)
 
+    cout << "Now, doing it with the iterator instead of a counted loop:" << endl;
 
     for (
       vector<int>::iterator it = primes.begin(); // grab the iterator
