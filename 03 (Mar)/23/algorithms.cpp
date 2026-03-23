@@ -42,7 +42,7 @@ int main (void) {
     cout << endl << "Using fill on an array: " << endl;
     for (int i = 0; i < 10; i++) cout << numbersPtr[i] << " ";
     cout << endl;
-	
+
     free(numbersPtr);
 
 
