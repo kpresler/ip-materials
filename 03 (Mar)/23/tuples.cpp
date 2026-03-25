@@ -36,10 +36,10 @@ int main (void) {
 
     tuple<int, int> topLeft = make_tuple(500, 200);
 
-    // bizarre syntax for accessing things from a tuple.  who came up with this crap?    
+    // bizarre syntax for accessing things from a tuple.  who came up with this crap?
     printf("Coordinate located at (%d, %d)\n", std::get<0>(topLeft), std::get<1>(topLeft));
-    
+
     // Bjarne, would it have been too hard to do topLeft.get(0) instead?  apparently.
-    
+
     return 0;
 }
