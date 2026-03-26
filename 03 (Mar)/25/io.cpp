@@ -19,7 +19,8 @@ int main (void) {
 
     std::ofstream outputFile(fileName);
 
-    for (int i = 0; i < count; i++) outputFile << rand() % 100 << endl;
+    for (int i = 0; i < count; i++)
+        outputFile << rand() % 100 << endl;
 
     cout << "Done!" << endl;
 
@@ -28,7 +29,8 @@ int main (void) {
     int num;
 
     long prod = 1;
-    while (inputFile >> num) prod *= num;
+    while (inputFile >> num)
+        prod *= num;
 
     cout << "The product of all numbers is " << prod << endl;
 
