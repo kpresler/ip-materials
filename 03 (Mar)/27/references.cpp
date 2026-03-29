@@ -12,7 +12,7 @@ void doubleList(vector<int> & numbers) {
 void printList(const vector<int> & numbers) {
     // here, we share a reference with our function, to avoid the copy operation that would typically
 	// take place, _but_ we share a const reference which is the function promising it won't modify things
-    for (vector<int>::iterator it = numbers.begin(); it != numbers.end(); ++it) cout << *it;
+    for (vector<int>::const_iterator it = numbers.cbegin(); it != numbers.cend(); ++it) cout << *it;
 
     // verboten: we can't do this, because the reference is const, and thus can't be modified
     // for (vector<int>::iterator it = numbers.begin(); it != numbers.end(); ++it) *it *= 2;
@@ -43,6 +43,7 @@ int main (void) {
     powsOfTwo.push_back(32);
 
     cout << "~~~" << endl;
+    cout << "After adding a new value:" << endl;
 
     cout << "Numbers: ";
     for (vector<int>::iterator it = numbers.begin(); it != numbers.end(); ++it) cout << *it << " ";
@@ -60,8 +61,8 @@ int main (void) {
 
     powsOfTwo.push_back(64);
 
-    cout << "After adding a new value:" << endl;
     cout << "~~~" << endl;
+    cout << "And now, with references:" << endl;
 
     cout << "powsOfTwo: ";
     for (vector<int>::iterator it = powsOfTwo.begin(); it != powsOfTwo.end(); ++it) cout << *it << " ";
@@ -77,8 +78,8 @@ int main (void) {
     // if we pass a reference to a list, we likewise share our existing object instance -- no copy is made
     doubleList(powsOfTwo);
 
-    cout << "After doubling:" << endl;
     cout << "~~~" << endl;
+    cout << "After doubling:" << endl;
 
     // thus, we'll get to see the change that the function made
     cout << "powsOfTwo: ";

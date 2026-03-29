@@ -8,6 +8,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
+using std::ofstream;
 
 int main (void) {
     string fileName;
@@ -17,7 +18,7 @@ int main (void) {
 
     cin >> fileName >> count;
 
-    std::ofstream outputFile(fileName);
+    ofstream outputFile(fileName);
 
     for (int i = 0; i < count; i++)
         outputFile << rand() % 100 << endl;
