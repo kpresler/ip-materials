@@ -12,4 +12,4 @@ person.o: person.cpp
 	$(CPP) $(CPPFLAGS) -c person.cpp
 
 clean:
-	rm -f *.0 *~ objectmain
+	rm -f *.o *~ objectmain
