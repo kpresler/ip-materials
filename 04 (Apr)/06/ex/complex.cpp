@@ -18,9 +18,10 @@ Complex::Complex(const Complex& rhs) {
 }
 
 // TODO: assignment operator
-void Complex::operator=(const Complex& rhs) {
+Complex & Complex::operator=(const Complex& rhs) {
   rel = rhs.rel;
   img = rhs.img;
+  return *this;
 }
 
 // TODO: add operator

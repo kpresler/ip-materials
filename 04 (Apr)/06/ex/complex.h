@@ -39,7 +39,7 @@ class Complex {
     Complex(const Complex& rhs);
 
     // TODO: overload assignment operator
-    void operator=(const Complex& rhs);
+    Complex & operator=(const Complex& rhs);
 
     // TODO: overload the add operator
     Complex operator+(const Complex& rhs);
