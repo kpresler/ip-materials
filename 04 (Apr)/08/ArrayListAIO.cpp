@@ -70,7 +70,7 @@ int main (void) {
 
 
     ArrayList<double> ald(5);
-    
+
     ald.add(20.7);
     ald.add(-13.2);
     ald.add(46/3);
