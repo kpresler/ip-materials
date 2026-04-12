@@ -23,9 +23,9 @@ class Weapon {
 
 class MeleeWeapon : public Weapon {
     public:
-        MeleeWeapon (int damage, int length) : 
-            Weapon (damage, false), 
-            length (length) 
+        MeleeWeapon (int damage, int length) :
+            Weapon (damage, false),
+            length (length)
             { }
 
         int damageFalloff(int distance) {
@@ -41,13 +41,13 @@ class MeleeWeapon : public Weapon {
 
 class Sword : public MeleeWeapon {
     public:
-        Sword (int damage, int numHands, int length) : 
-            MeleeWeapon (damage, length), 
-            numHands (numHands) 
+        Sword (int damage, int numHands, int length) :
+            MeleeWeapon (damage, length),
+            numHands (numHands)
             { }
-            
-        int getNumHands() { 
-            return numHands; 
+
+        int getNumHands() {
+            return numHands;
         }
 
     private:
@@ -60,14 +60,14 @@ class LaserCannon : public Weapon {
         LaserCannon (int damage) :
             Weapon(damage, true) {}
 
-        int damageFalloff (int distance) { 
+        int damageFalloff (int distance) {
             // lasers do not obey laws of physics and suffer no falloff
-            return damage; 
+            return damage;
         } 
 
 };
 
-ostream & operator<< (ostream & out, const Sword & sw) {
+ostream & operator<< (ostream & out, Sword & sw) {
     out << "This sword requires " << sw.getNumHands() << " hands and deals " << sw.getDamage() << " damage" << std::endl;
     return out;
 }
