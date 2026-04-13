@@ -16,7 +16,7 @@ int main (void) {
 
   aptr = &aobj;
   aptr->show();
-  aptr->display(); 
+  aptr->display();
   cout << endl;
   // commenting out because A::d is protected and this is not a member function
   //aobj.d = 17.5;
@@ -26,9 +26,9 @@ int main (void) {
   // Commenting out because A does not have a member function setb
   //aptr->setb(15);
   aptr->seta(3);
-  aptr->show();     
+  aptr->show();
   cout << endl;
-  aptr->display();  
+  aptr->display();
 
   cout << endl;
   aobj = A(10);
@@ -36,7 +36,7 @@ int main (void) {
   aobj = bobj;
   aobj.show();
   A a5(5);
-  // commenting out because B does not define an assignment operator from type A 
+  // commenting out because B does not define an assignment operator from type A
   //bobj = a5;
 
 }
